@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>NutriFit - Kalori Hesaplayıcı</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f9f4; color: #333; }
+        .box { background: white; padding: 30px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        select, button { padding: 10px; font-size: 16px; margin-top: 15px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #2E7D32; color: white; cursor: pointer; }
+        button:hover { background-color: #1B5E20; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>🥗 NutriFit Kalori Hesaplayıcı</h2>
+        <p>Yemeğinizi seçin, besin değerini görün:</p>
+        <select id="yemek">
+            <option value="Izgara Tavuk Salatası -> 350 Kalori (Protein: 35g)">Izgara Tavuk Salatası (350 kcal)</option>
+            <option value="Mercimek Çorbası -> 180 Kalori (Protein: 9g)">Mercimek Çorbası (180 kcal)</option>
+        </select>
+        <br>
+        <button onclick="hesapla()">Hesapla</button>
+        <h3 id="sonuc" style="margin-top:20px; color:#2E7D32;"></h3>
+    </div>
+    <script>
+        function hesapla() {
+            var secim = document.getElementById("yemek").value;
+            document.getElementById("sonuc").innerHTML = "Sonuç: " + secim;
+        }
+    </script>
+</body>
+</html>
